@@ -1,0 +1,28 @@
+<form class="form-signup" #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+    <div class="container-fluid">
+      <h2 class="form-signup-heading">Register</h2>
+      <br />
+      <div *ngIf="registrationError" class="alert alert-danger">Registration failed.</div>
+      <br />
+      <label for="firstname" class="sr-only">Firstname</label>
+      <input type="text" id="firstname" name="firstname" ngModel class="form-control" placeholder="Firstname" required autofocus>
+      <br>
+      <label for="lastname" class="sr-only">Lastname</label>
+      <input type="text" id="lastname" name="lastname" ngModel class="form-control" placeholder="Lastname" required autofocus>
+      <br>
+      <label for="email" class="sr-only">Email address</label>
+      <input type="email" id="email" name="email" ngModel class="form-control" placeholder="Email address" required>
+      <br />
+      <label for="username" class="sr-only">Username</label>
+      <input type="text" id="username" name="username" ngModel class="form-control" placeholder="Username" required autofocus>
+      <br />
+      <label for="password" class="sr-only">Password</label>
+      <input type="password" id="password" name="password" ngModel class="form-control" placeholder="Password" required>
+      <br />
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+      <div class="pt-4 text-muted">
+        Already have an account? <a routerLink="/login">Login</a>
+      </div>
+    </div>
+  </form>
+  
